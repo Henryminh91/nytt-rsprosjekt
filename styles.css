@@ -1,129 +1,203 @@
-body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #000; /* Dark background color */
-}
-
-.space-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Send the background behind the 3D scene */
-    background-image: url('./images/space.jpg'); /* Replace with the path to your space background image */
+/* ---------- Container for the orbiting circles animation ---------- */
+body{
+    background-image: url('./images/space.jpg'); /* Replace with the path to your background image */
     background-size: cover;
+    background-position: center;
+    border-radius: 100%;
 }
-
-.sun {
-    width: 250px;
-    height: 250px;
-    background-image: url('./images/sun.png'); /* Replace with the path to your Sun image */
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
+#circle-orbit-container {
+  position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 50px rgba(243, 156, 18, 0.8); /* Sun glow effect */
-}
-
-.mercury {
-    width: 2rem;
-    height: 2rem;
-    background-image: url('./images/mercury.png'); /* Replace with the path to your Mercury image */
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    transform: translateX(-50%);
-}
-
-.venus {
-    width: 40px;
-    height: 40px;
-    background-image: url('./images/venus.png'); /* Replace with the path to your Venus image */
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.earth {
-    width: 50px;
-    height: 50px;
-    background-image: url('./images/earth.png'); /* Replace with the path to your Earth image */
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 20%;
-    left: 65%;
-    transform: translateX(-50%);
-}
-
-.mars {
-    width: 60px;
-    height: 60px;
-    background-image: url('./images/mars.png'); /* Replace with the path to your Mars image */
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 10%;
-    left: 60%;
-    transform: translateX(-50%);
-}
-
-.jupiter {
-    width: 170px;
-    height: 170px;
-    background-image: url('./images/jupiter.png'); /* Replace with the path to your Jupiter image */
-    background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translateX(-50%);
-}
-
-.saturn {
+    height: 300px;
     width: 300px;
-    height: 150px;
-    background-image: url('./images/saturn.png'); /* Replace with the path to your Saturn image */
-    background-size: cover;
-    border-radius: 0%;
-    position: absolute;
-    top: 70%;
-    left: 70%;
-    transform: translateX(-50%);
+  
 }
 
-.uranus {
-    width: 100px;
-    height: 100px;
-    background-image: url('./images/uranus.png'); /* Replace with the path to your Uranus image */
+/* ---------- Inner orbit - This is the circles closest to the central point ---------- */
+#inner-orbit {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 150px;
+  height: 150px;
+  /* border: 2px #fff dashed; */
+  border-radius: 100%;
+  -webkit-animation: spin-right 25s linear infinite;
+  animation: spin-right 25s linear infinite;
+     background-image: url('./images/sun.png'); /* Replace with the path to your background image */
     background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 40%;
-    left: 75%;
-    transform: translateX(-50%);
+    background-position: center;
+    border-radius: 100%;
+     box-shadow: 0 0 50px rgba(243, 156, 18, 0.8), 0 0 100px rgba(243, 156, 18, 0.4); /* Sun glow effect */
 }
 
-.neptune {
-    width: 80px;
-    height: 80px;
-    background-image: url('./images/neptune.png'); /* Replace with the path to your Neptune image */
+
+/* ---------- Repeating styles for the inner orbiting circles ---------- */
+.inner-orbit-cirlces {
+  position: absolute;
+  top: 12px;
+  left: -6px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+     background-image: url('./images/mercury.png'); 
     background-size: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
+    background-position: center;
+    border-radius: 100%;
+
 }
 
+
+#middle-orbit {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 225px;
+  height: 225px;
+  
+  border-radius: 100%;
+  -webkit-animation: spin-right 15s linear infinite;
+  animation: spin-right 15s linear infinite;
+}
+
+
+.middle-orbit-cirlces {
+  position: absolute;
+  top: -25px;
+  left: 17px;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+     background-image: url('./images/earth.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+
+#outer-orbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 294px;
+  height: 294px;
+  /* border: 2px #fff dashed; */
+  border-radius: 100%;
+  -webkit-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
+}
+
+
+.outer-orbit-cirlces {
+  position: absolute;
+  top: -70px;
+  left: 125px;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+   background-image: url('./images/mars.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+
+
+
+#fifth-orbit {
+  position: absolute;
+  top: -30px;
+  left: -25px;
+  width: 350px;
+  height: 350px;
+  /* border: 2px #fff dashed; */
+  border-radius: 100%;
+  -webkit-animation: spin-right 25s linear infinite;
+  animation: spin-right 25s linear infinite;
+}
+
+
+.fifth-orbit-circles {
+  position: absolute;
+  top: -110px;
+  left: 150px;
+  height: 65px;
+  width: 65px;
+  border-radius: 100%;
+  background-image: url('./images/venus.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+
+#sixth-orbit {
+  position: absolute;
+  top: -80px;
+  left: -75px;
+  width: 450px;
+  height: 450px;
+  /* border: 2px #fff dashed; */
+  border-radius: 100%;
+  -webkit-animation: spin-right 30s linear infinite;
+  animation: spin-right 30s linear infinite;
+}
+
+
+.sixth-orbit-circles {
+  position: absolute;
+  top: -150px;
+  left: 175px;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  background-image: url('./images/jupiter.png'); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+
+
+#seventh-orbit {
+  position: absolute;
+  top: -105px;
+  left: -95px;
+  width: 500px;
+  height: 500px;
+  /* border: 2px #fff dashed; */
+  border-radius: 100%;
+  -webkit-animation: spin-right 35s linear infinite;
+  animation: spin-right 35s linear infinite;
+}
+
+
+.seventh-orbit-circles {
+  position: absolute;
+  top: -200px;
+  left: 200px;
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  background-image: url('./images/uranus.png'); 
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
