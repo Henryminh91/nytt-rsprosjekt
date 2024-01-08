@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000; /* Dark background color */
+}
+
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the background behind the 3D scene */
+    background-image: url('./images/space.jpg'); /* Replace with the path to your space background image */
+    background-size: cover;
+}
+
+.sun {
+    width: 250px;
+    height: 250px;
+    background-image: url('./images/sun.png'); /* Replace with the path to your Sun image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px rgba(243, 156, 18, 0.8); /* Sun glow effect */
+}
+
+.mercury {
+    width: 2rem;
+    height: 2rem;
+    background-image: url('./images/mercury.png'); /* Replace with the path to your Mercury image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.venus {
+    width: 40px;
+    height: 40px;
+    background-image: url('./images/venus.png'); /* Replace with the path to your Venus image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.earth {
+    width: 50px;
+    height: 50px;
+    background-image: url('./images/earth.png'); /* Replace with the path to your Earth image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    transform: translateX(-50%);
+}
+
+.mars {
+    width: 60px;
+    height: 60px;
+    background-image: url('./images/mars.png'); /* Replace with the path to your Mars image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: translateX(-50%);
+}
+
+.jupiter {
+    width: 170px;
+    height: 170px;
+    background-image: url('./images/jupiter.png'); /* Replace with the path to your Jupiter image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.saturn {
+    width: 300px;
+    height: 150px;
+    background-image: url('./images/saturn.png'); /* Replace with the path to your Saturn image */
+    background-size: cover;
+    border-radius: 0%;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.uranus {
+    width: 100px;
+    height: 100px;
+    background-image: url('./images/uranus.png'); /* Replace with the path to your Uranus image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+.neptune {
+    width: 80px;
+    height: 80px;
+    background-image: url('./images/neptune.png'); /* Replace with the path to your Neptune image */
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
